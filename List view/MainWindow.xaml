@@ -1,0 +1,100 @@
+﻿<Window x:Class="List_view.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:List_view"
+        mc:Ignorable="d"
+        Title="Pacific Islands" Height="500" Width="300">
+    
+    <Grid>
+
+
+        <ListView Margin="15,16,15,14">
+            <ListViewItem HorizontalContentAlignment="Stretch">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="88" Height="80" RadiusY="40" RadiusX="40">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="https://images.pexels.com/photos/3423152/pexels-photo-3423152.jpeg"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label FontSize="18" Margin="15,0,0,0"
+                           VerticalAlignment="Center"
+                           Content=" Samoa  " FontFamily="Conic Sans MS" FontWeight="Bold"/>
+                </StackPanel>
+                
+            </ListViewItem>
+
+                <ListViewItem HorizontalContentAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Width="88" Height="80" RadiusY="40" RadiusX="40">
+                            <Rectangle.Fill>
+                            <ImageBrush ImageSource="https://images.pexels.com/photos/11434425/pexels-photo-11434425.jpeg"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <Label FontSize="18" Margin="15,0,0,0"
+                           VerticalAlignment="Center"
+                           Content="Cook Islands" FontFamily="Conic Sans MS" FontWeight="Bold"/>
+                    </StackPanel>
+                </ListViewItem>
+
+            <ListViewItem HorizontalContentAlignment="Stretch">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="88" Height="80" RadiusY="40" RadiusX="40">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="https://images.pexels.com/photos/5326991/pexels-photo-5326991.jpeg"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label FontSize="18" Margin="15,0,0,0"
+                           VerticalAlignment="Center"
+                           Content="Piha,NZ" FontFamily="Conic Sans MS" FontWeight="Bold"/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem HorizontalContentAlignment="Stretch">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="88" Height="80" RadiusY="40" RadiusX="40">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="https://images.pexels.com/photos/8828452/pexels-photo-8828452.jpeg"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label FontSize="18" Margin="15,0,0,0"
+                           VerticalAlignment="Center"
+                           Content="Kiribati, Map" FontFamily="Conic Sans MS" FontWeight="Bold"/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem HorizontalContentAlignment="Stretch">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="88" Height="80" RadiusY="40" RadiusX="40">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="https://images.pexels.com/photos/9656583/pexels-photo-9656583.jpeg"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label FontSize="18" Margin="15,0,0,0"
+                           VerticalAlignment="Center"
+                           Content="Fiji" FontFamily="Conic Sans MS" FontWeight="Bold"/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem HorizontalContentAlignment="Stretch">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="88" Height="80" RadiusY="40" RadiusX="40">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="https://images.pexels.com/photos/13992206/pexels-photo-13992206.jpeg"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label FontSize="18" Margin="15,0,0,0"
+                           VerticalAlignment="Center"
+                           Content="Tuvalu Flag" FontFamily="Conic Sans MS" FontWeight="Bold"/>
+                </StackPanel>
+            </ListViewItem>
+
+        </ListView>
+
+    </Grid>
+
+
+
+   
+</Window>

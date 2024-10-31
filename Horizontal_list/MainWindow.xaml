@@ -1,0 +1,100 @@
+﻿<Window x:Class="Horizontal_list.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Horizontal_list"
+        mc:Ignorable="d"
+        Title="Library Images" Height="400" Width="800">
+    <Grid>
+        <ListView Margin="15" HorizontalAlignment="Stretch" SelectionChanged="ListView_SelectionChanged">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            
+            
+            <ListViewItem HorizontalContentAlignment="Stretch">
+                <StackPanel Orientation="Vertical">
+                    <Rectangle Width="240" Height="240" RadiusY="120" RadiusX="120">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label FontSize="18" Margin="15,0,0,0"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                           Content="Library" FontFamily="Conic Sans MS" FontWeight="Bold"/>
+                </StackPanel>
+
+            </ListViewItem>
+
+            <ListViewItem HorizontalContentAlignment="Stretch">
+                <StackPanel Orientation="Vertical">
+                    <Rectangle Width="240" Height="240" RadiusY="120" RadiusX="120">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="https://images.pexels.com/photos/1290141/pexels-photo-1290141.jpeg"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label FontSize="18" Margin="15,0,0,0"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                           Content="Old Library" FontFamily="Conic Sans MS" FontWeight="Bold" RenderTransformOrigin="0.446,2.494"/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem HorizontalContentAlignment="Stretch">
+                <StackPanel Orientation="Vertical">
+                    <Rectangle Width="240" Height="240" RadiusY="120" RadiusX="120">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="https://images.pexels.com/photos/3747472/pexels-photo-3747472.jpeg"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label FontSize="18" Margin="15,0,0,0"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                           Content="Library Shelf" FontFamily="Conic Sans MS" FontWeight="Bold"/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem HorizontalContentAlignment="Stretch">
+                <StackPanel Orientation="Vertical">
+                    <Rectangle Width="240" Height="240" RadiusY="120" RadiusX="120">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="https://images.pexels.com/photos/256374/pexels-photo-256374.jpeg"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label FontSize="18" Margin="15,0,0,0"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                           Content="Informative Books" FontFamily="Conic Sans MS" FontWeight="Bold"/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem HorizontalContentAlignment="Stretch">
+                <StackPanel Orientation="Vertical">
+                    <Rectangle Width="240" Height="240" RadiusY="120" RadiusX="120">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="https://images.pexels.com/photos/3861778/pexels-photo-3861778.jpeg"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label FontSize="18" Margin="15,0,0,0"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                           Content="Books..." FontFamily="Conic Sans MS" FontWeight="Bold"/>
+                </StackPanel>
+            </ListViewItem>
+
+            <ListViewItem HorizontalContentAlignment="Stretch">
+                <StackPanel Orientation="Vertical">
+                    <Rectangle Width="240" Height="240" RadiusY="120" RadiusX="120">
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="https://images.pexels.com/photos/2284168/pexels-photo-2284168.jpeg"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label FontSize="18" Margin="15,0,0,0"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                           Content="More books..." FontFamily="Conic Sans MS" FontWeight="Bold"/>
+                </StackPanel>
+            </ListViewItem>
+
+        </ListView>
+
+    </Grid>
+</Window>

@@ -1,0 +1,87 @@
+﻿<Window x:Class="Grid_style_demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Grid_style_demo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="34*"/>
+        </Grid.ColumnDefinitions>
+        <ListView x:Name="SellList" Margin="15,15,15,15" Grid.ColumnSpan="2">
+            <ListView.Resources>
+                <Style TargetType="StackPanel" x:Key="HeaderStyle">
+                    <Setter Property="Height" Value="auto"/>
+                    <Setter Property="Width" Value="auto"/>
+                    <Setter Property="Orientation" Value="Horizontal"/>
+                </Style>
+
+                <Style TargetType="TextBlock" x:Key="HeaderTextStyle">
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="Margin" Value="10,0,0,0"/>
+                </Style>
+
+                <Style TargetType="Image" x:Key="HeaderIconStyle">
+                    <Setter Property="Height" Value="32"/>
+                    <Setter Property="Margin" Value="10"/>
+                </Style>
+
+                <Style TargetType="ListViewItem" >
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="FontSize" Value="16"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                </Style>
+            </ListView.Resources>
+            <ListView.View>
+
+                <GridView>
+
+                    <GridViewColumn >
+                        <StackPanel Style="{StaticResource HeaderStyle}">
+                            <TextBlock Text="Product" Style="{StaticResource HeaderTextStyle}"/>
+                            <Image Source="Product_Icon.png" Style="{StaticResource HeaderIconStyle}"/>
+                        </StackPanel>
+
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding ProductName}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn >
+                        <StackPanel Style="{StaticResource HeaderStyle}">
+                            <TextBlock Text="Quantity" Style="{StaticResource HeaderTextStyle}"/>
+                            <Image Source="Quantity_Icon.png" Style="{StaticResource HeaderIconStyle}"/>
+                        </StackPanel>
+
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Quantity}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn >
+
+                    <GridViewColumn>
+                        <StackPanel Style="{StaticResource HeaderStyle}">
+                            <TextBlock Text="Cost" Style="{StaticResource HeaderTextStyle}"/>
+                            <Image Source="Cost_Icon.png" Style="{StaticResource HeaderIconStyle}"/>
+                        </StackPanel>
+
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding TotalCost, StringFormat='{}{0:#,#,0}$NZD'}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

@@ -1,0 +1,69 @@
+﻿<Window x:Class="Grid_view_filter_demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Grid_view_filter_demo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="600">
+    <DockPanel>
+        <TextBox DockPanel.Dock="Top" Margin="15,15,15,0" 
+                 Name="searchBar" Height="32"
+                 TextChanged="searcgBarTextChanged"
+                 VerticalContentAlignment="Center" FontSize="16"/>
+        <ListView DockPanel.Dock="Bottom" x:Name="studentList" Margin="15" Height="auto" SelectionChanged="studentList_SelectionChanged"/>
+        
+            <ListView.Resources>
+                <Style x:Key="HeaderStyle" TargetType="StackPanel">
+                    <Setter Property="Background" Value="LightGray"/>
+                    <Setter Property="Orientation" Value="Horizontal"/>
+                </Style>
+                <Style x:Key="HeaderTextStyle" TargetType="TextBlock">
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="FontSize" Value="14"/>
+                </Style>
+                <DataTemplate x:Key="StudentTemplate">
+                    <StackPanel>
+                        <TextBlock Text="{Binding FullName}" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding Mark}" Foreground="Gray"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.Resources>
+        <ListView.View>
+            <GridView>
+                    <GridViewColumn>
+                        <GridViewColumn.Header>
+                            <GridViewColumnHeader Tag="FullName">
+                                <StackPanel Style="{StaticResource HeaderStyle}">
+                                    <TextBlock Text="Student Name" Style="{StaticResource HeaderTextStyle}" />
+                                </StackPanel>
+                            </GridViewColumnHeader>
+                        </GridViewColumn.Header>
+
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding FullName}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn>
+                        <GridViewColumn.Header>
+                            <GridViewColumnHeader Tag="Mark">
+                                <StackPanel Style="{StaticResource HeaderStyle}">
+                                    <TextBlock Text="Mark" Style="{StaticResource HeaderTextStyle}"/>
+                                </StackPanel>
+                            </GridViewColumnHeader>
+                        </GridViewColumn.Header>
+
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Mark, StringFormat='{}{0}%'}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                        
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+    </DockPanel>
+</Window>
